@@ -34,12 +34,3 @@ services:
             - "MYSQL_ROOT_PASSWORD=fuel_db_password"
         ports:
             - "13306:3306"
-    redis:
-        container_name: fuel_redis
-        restart: always
-        image: redis:latest
-        volumes:
-            - ./redis:/data
-        ports:
-            - "16379:6379"
-        command: redis-server --appendonly yes
